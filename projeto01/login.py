@@ -23,7 +23,12 @@ def entrar(event=None):
             passwd = campo_passwd.get(),
             db=os.environ['DB']
         )
-
+        user = campo_nome.get()
+        passwd = campo_passwd.get()
+        if user == os.environ['USER'] and passwd == os.environ['PASSWD']:
+            messagebox.showinfo("Sucesso", "Login realizado com sucesso!")
+        else:
+            messagebox.showinfo("Erro")
     except:
         messagebox.showerror('Error', 'Erro ao conectar')
     else:
@@ -38,7 +43,7 @@ def entrar(event=None):
 janela = Tk()
 janela.title('Tkinter - Projeto 01')
 janela.geometry('310x300')
-# janela.bind('<Return>', entrar)
+janela.bind('<Return>', entrar)
 
 # Dividindo a janela
 frame_cima = Frame(
