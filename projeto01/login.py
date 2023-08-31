@@ -23,12 +23,7 @@ def entrar(event=None):
             passwd = campo_passwd.get(),
             db=os.environ['DB']
         )
-        user = campo_nome.get()
-        passwd = campo_passwd.get()
-        if user == os.environ['USER'] and passwd == os.environ['PASSWD']:
-            messagebox.showinfo("Sucesso", "Login realizado com sucesso!")
-        else:
-            messagebox.showinfo("Erro")
+
     except:
         messagebox.showerror('Error', 'Erro ao conectar')
     else:
