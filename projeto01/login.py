@@ -6,7 +6,7 @@ from tkinter import *
 from tkinter import messagebox
 from env import *
 
-load_dotenv('./env')
+load_dotenv('env.py')
 
 def mostrar_senha():
     if mostrar.get():

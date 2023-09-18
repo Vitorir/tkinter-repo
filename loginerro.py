@@ -4,7 +4,7 @@ def fazer_login():
     usuario = campo_usuario.get()
     senha = campo_senha.get()
     
-    if usuario == "usuario" and senha == "senha":
+    if usuario == "admin" and senha == 123:
         resultado_label.config(text="Login realizado com sucesso!", fg="green")
     else:
         resultado_label.config(text="Credenciais inválidas", fg="red")
